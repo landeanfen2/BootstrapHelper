@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0B28771-9D72-45B0-8738-6F360549F94F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BootstrapHelper</RootNamespace>
+    <AssemblyName>BootstrapHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-datetimepicker\css\bootstrap-datetimepicker-standalone.css" />
+    <Content Include="Content\bootstrap-datetimepicker\css\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap-datetimepicker\js\bootstrap-datetimepicker-helper.js" />
+    <Content Include="Content\bootstrap-datetimepicker\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\bootstrap-datetimepicker\js\moment-with-locales.js" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\bootstrap\js\npm.js" />
+    <Content Include="Content\jquery-1.9.1.js" />
+    <Content Include="Content\jquery-1.9.1.min.js" />
+    <Content Include="Content\jquery.spinner\css\bootstrap-spinner.css" />
+    <Content Include="Content\jquery.spinner\css\bootstrap-spinner.min.css" />
+    <Content Include="Content\jquery.spinner\js\jquery.spinner.js" />
+    <Content Include="Content\jquery.spinner\js\jquery.spinner.min.js" />
+    <Content Include="Content\select2-master\dist\css\select2.css" />
+    <Content Include="Content\select2-master\dist\css\select2.min.css" />
+    <Content Include="Content\select2-master\dist\js\i18n\ar.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\az.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\bg.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\ca.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\cs.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\da.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\de.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\en.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\es.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\et.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\eu.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\fa.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\fi.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\fr.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\gl.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\he.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\hi.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\hr.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\hu.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\id.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\is.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\it.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\ja.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\ko.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\lt.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\lv.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\mk.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\ms.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\nb.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\nl.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\pl.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\pt-BR.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\pt.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\ro.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\ru.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\sk.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\sr-Cyrl.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\sr.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\sv.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\th.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\tr.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\uk.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\vi.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\zh-CN.js" />
+    <Content Include="Content\select2-master\dist\js\i18n\zh-TW.js" />
+    <Content Include="Content\select2-master\dist\js\select2.full.js" />
+    <Content Include="Content\select2-master\dist\js\select2.full.min.js" />
+    <Content Include="Content\select2-master\dist\js\select2.js" />
+    <Content Include="Content\select2-master\dist\js\select2.min.js" />
+    <Content Include="Content\select2-master\docs\announcements-4.0.html" />
+    <Content Include="Content\select2-master\docs\community.html" />
+    <Content Include="Content\select2-master\docs\examples.html" />
+    <Content Include="Content\select2-master\docs\images\logo.png" />
+    <Content Include="Content\select2-master\docs\index.html" />
+    <Content Include="Content\select2-master\docs\options-old.html" />
+    <Content Include="Content\select2-master\docs\options.html" />
+    <Content Include="Content\select2-master\docs\vendor\css\bootstrap.min.css" />
+    <Content Include="Content\select2-master\docs\vendor\css\font-awesome.min.css" />
+    <Content Include="Content\select2-master\docs\vendor\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ak.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\al.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ar.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\az.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ca.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\co.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ct.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\de.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\fl.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ga.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\hi.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ia.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\id.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\il.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\in.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ks.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ky.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\la.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ma.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\md.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\me.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\mi.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\mn.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\mo.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ms.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\mt.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\nc.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\nd.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ne.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\nh.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\nj.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\nm.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\nv.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ny.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\oh.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ok.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\or.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\pa.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ri.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\sc.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\sd.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\tn.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\tx.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\ut.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\va.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\vt.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\wa.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\wi.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\wv.png" />
+    <Content Include="Content\select2-master\docs\vendor\images\flags\wy.png" />
+    <Content Include="Content\select2-master\docs\vendor\js\anchor.min.js" />
+    <Content Include="Content\select2-master\docs\vendor\js\bootstrap.min.js" />
+    <Content Include="Content\select2-master\docs\vendor\js\jquery.min.js" />
+    <Content Include="Content\select2-master\docs\vendor\js\placeholders.jquery.min.js" />
+    <Content Include="Content\select2-master\docs\vendor\js\prettify.min.js" />
+    <Content Include="Content\select2-master\docs\_includes\examples\basics.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\data.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\disabled-mode.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\disabled-results.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\hide-search.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\localization-rtl-diacritics.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\matcher.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\multiple-max.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\placeholders.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\programmatic-control.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\tags.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\themes-templating-responsive-design.html" />
+    <Content Include="Content\select2-master\docs\_includes\examples\tokenizer.html" />
+    <Content Include="Content\select2-master\docs\_includes\footer.html" />
+    <Content Include="Content\select2-master\docs\_includes\ga.html" />
+    <Content Include="Content\select2-master\docs\_includes\head.html" />
+    <Content Include="Content\select2-master\docs\_includes\js-source-states.html" />
+    <Content Include="Content\select2-master\docs\_includes\navigation.html" />
+    <Content Include="Content\select2-master\docs\_includes\nav\announcements-4.0.html" />
+    <Content Include="Content\select2-master\docs\_includes\nav\examples.html" />
+    <Content Include="Content\select2-master\docs\_includes\nav\options-old.html" />
+    <Content Include="Content\select2-master\docs\_includes\nav\options.html" />
+    <Content Include="Content\select2-master\docs\_includes\notice-previous.html" />
+    <Content Include="Content\select2-master\docs\_includes\options-old\adapters.html" />
+    <Content Include="Content\select2-master\docs\_includes\options-old\backwards-compatibility.html" />
+    <Content Include="Content\select2-master\docs\_includes\options-old\core-options.html" />
+    <Content Include="Content\select2-master\docs\_includes\options-old\dropdown.html" />
+    <Content Include="Content\select2-master\docs\_includes\options-old\events.html" />
+    <Content Include="Content\select2-master\docs\_includes\options-old\setting-default-options.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\compatibility.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\compatibility\initial-selection.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\compatibility\introduction.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\compatibility\matcher.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\compatibility\query-function.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\compatibility\text-input.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\core.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\core\amd-support.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\core\data-attributes.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\core\options.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\data.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\data\ajax.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\data\array.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\data\select.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\dropdown.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\dropdown\filtering.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\dropdown\placement.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\dropdown\selections.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\events.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\events\internal.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\events\jquery.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\introduction.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\not-written.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\selections.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\selections\clearing-selections.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\selections\multiple.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\selections\placeholder.html" />
+    <Content Include="Content\select2-master\docs\_includes\options\selections\templating.html" />
+    <Content Include="Content\select2-master\docs\_includes\social-buttons.html" />
+    <Content Include="Content\select2-master\docs\_layouts\default.html" />
+    <Content Include="Content\select2-master\docs\_layouts\home.html" />
+    <Content Include="Content\select2-master\Gruntfile.js" />
+    <Content Include="Content\select2-master\src\js\banner.end.js" />
+    <Content Include="Content\select2-master\src\js\banner.start.js" />
+    <Content Include="Content\select2-master\src\js\jquery.mousewheel.shim.js" />
+    <Content Include="Content\select2-master\src\js\jquery.select2.js" />
+    <Content Include="Content\select2-master\src\js\jquery.shim.js" />
+    <Content Include="Content\select2-master\src\js\select2\compat\containerCss.js" />
+    <Content Include="Content\select2-master\src\js\select2\compat\dropdownCss.js" />
+    <Content Include="Content\select2-master\src\js\select2\compat\initSelection.js" />
+    <Content Include="Content\select2-master\src\js\select2\compat\inputData.js" />
+    <Content Include="Content\select2-master\src\js\select2\compat\matcher.js" />
+    <Content Include="Content\select2-master\src\js\select2\compat\query.js" />
+    <Content Include="Content\select2-master\src\js\select2\compat\utils.js" />
+    <Content Include="Content\select2-master\src\js\select2\core.js" />
+    <Content Include="Content\select2-master\src\js\select2\data\ajax.js" />
+    <Content Include="Content\select2-master\src\js\select2\data\array.js" />
+    <Content Include="Content\select2-master\src\js\select2\data\base.js" />
+    <Content Include="Content\select2-master\src\js\select2\data\maximumInputLength.js" />
+    <Content Include="Content\select2-master\src\js\select2\data\maximumSelectionLength.js" />
+    <Content Include="Content\select2-master\src\js\select2\data\minimumInputLength.js" />
+    <Content Include="Content\select2-master\src\js\select2\data\select.js" />
+    <Content Include="Content\select2-master\src\js\select2\data\tags.js" />
+    <Content Include="Content\select2-master\src\js\select2\data\tokenizer.js" />
+    <Content Include="Content\select2-master\src\js\select2\defaults.js" />
+    <Content Include="Content\select2-master\src\js\select2\diacritics.js" />
+    <Content Include="Content\select2-master\src\js\select2\dropdown.js" />
+    <Content Include="Content\select2-master\src\js\select2\dropdown\attachBody.js" />
+    <Content Include="Content\select2-master\src\js\select2\dropdown\attachContainer.js" />
+    <Content Include="Content\select2-master\src\js\select2\dropdown\closeOnSelect.js" />
+    <Content Include="Content\select2-master\src\js\select2\dropdown\hidePlaceholder.js" />
+    <Content Include="Content\select2-master\src\js\select2\dropdown\infiniteScroll.js" />
+    <Content Include="Content\select2-master\src\js\select2\dropdown\minimumResultsForSearch.js" />
+    <Content Include="Content\select2-master\src\js\select2\dropdown\search.js" />
+    <Content Include="Content\select2-master\src\js\select2\dropdown\selectOnClose.js" />
+    <Content Include="Content\select2-master\src\js\select2\dropdown\stopPropagation.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\ar.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\az.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\bg.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\ca.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\cs.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\da.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\de.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\en.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\es.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\et.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\eu.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\fa.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\fi.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\fr.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\gl.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\he.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\hi.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\hr.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\hu.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\id.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\is.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\it.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\ja.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\ko.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\lt.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\lv.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\mk.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\ms.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\nb.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\nl.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\pl.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\pt-BR.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\pt.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\ro.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\ru.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\sk.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\sr-Cyrl.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\sr.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\sv.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\th.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\tr.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\uk.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\vi.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\zh-CN.js" />
+    <Content Include="Content\select2-master\src\js\select2\i18n\zh-TW.js" />
+    <Content Include="Content\select2-master\src\js\select2\keys.js" />
+    <Content Include="Content\select2-master\src\js\select2\options.js" />
+    <Content Include="Content\select2-master\src\js\select2\results.js" />
+    <Content Include="Content\select2-master\src\js\select2\selection\allowClear.js" />
+    <Content Include="Content\select2-master\src\js\select2\selection\base.js" />
+    <Content Include="Content\select2-master\src\js\select2\selection\clickMask.js" />
+    <Content Include="Content\select2-master\src\js\select2\selection\eventRelay.js" />
+    <Content Include="Content\select2-master\src\js\select2\selection\multiple.js" />
+    <Content Include="Content\select2-master\src\js\select2\selection\placeholder.js" />
+    <Content Include="Content\select2-master\src\js\select2\selection\search.js" />
+    <Content Include="Content\select2-master\src\js\select2\selection\single.js" />
+    <Content Include="Content\select2-master\src\js\select2\selection\stopPropagation.js" />
+    <Content Include="Content\select2-master\src\js\select2\translation.js" />
+    <Content Include="Content\select2-master\src\js\select2\utils.js" />
+    <Content Include="Content\select2-master\src\js\wrapper.end.js" />
+    <Content Include="Content\select2-master\src\js\wrapper.start.js" />
+    <Content Include="Content\select2-master\tests\a11y\search-tests.js" />
+    <Content Include="Content\select2-master\tests\a11y\selection-tests.js" />
+    <Content Include="Content\select2-master\tests\data\array-tests.js" />
+    <Content Include="Content\select2-master\tests\data\base-tests.js" />
+    <Content Include="Content\select2-master\tests\data\inputData-tests.js" />
+    <Content Include="Content\select2-master\tests\data\maximumInputLength-tests.js" />
+    <Content Include="Content\select2-master\tests\data\maximumSelectionLength-tests.js" />
+    <Content Include="Content\select2-master\tests\data\minimumInputLength-tests.js" />
+    <Content Include="Content\select2-master\tests\data\select-tests.js" />
+    <Content Include="Content\select2-master\tests\data\tags-tests.js" />
+    <Content Include="Content\select2-master\tests\data\tokenizer-tests.js" />
+    <Content Include="Content\select2-master\tests\dropdown\dropdownCss-tests.js" />
+    <Content Include="Content\select2-master\tests\dropdown\selectOnClose-tests.js" />
+    <Content Include="Content\select2-master\tests\dropdown\stopPropagation-tests.js" />
+    <Content Include="Content\select2-master\tests\helpers.js" />
+    <Content Include="Content\select2-master\tests\integration.html" />
+    <Content Include="Content\select2-master\tests\integration\select2-methods.js" />
+    <Content Include="Content\select2-master\tests\options\data-tests.js" />
+    <Content Include="Content\select2-master\tests\options\deprecated-tests.js" />
+    <Content Include="Content\select2-master\tests\options\translation-tests.js" />
+    <Content Include="Content\select2-master\tests\options\width-tests.js" />
+    <Content Include="Content\select2-master\tests\selection\allowClear-tests.js" />
+    <Content Include="Content\select2-master\tests\selection\containerCss-tests.js" />
+    <Content Include="Content\select2-master\tests\selection\multiple-tests.js" />
+    <Content Include="Content\select2-master\tests\selection\placeholder-tests.js" />
+    <Content Include="Content\select2-master\tests\selection\search-tests.js" />
+    <Content Include="Content\select2-master\tests\selection\single-tests.js" />
+    <Content Include="Content\select2-master\tests\selection\stopPropagation-tests.js" />
+    <Content Include="Content\select2-master\tests\unit.html" />
+    <Content Include="Content\select2-master\tests\utils\decorator-tests.js" />
+    <Content Include="Content\select2-master\tests\utils\escapeMarkup-tests.js" />
+    <Content Include="Content\select2-master\tests\vendor\jquery-1.7.2.js" />
+    <Content Include="Content\select2-master\tests\vendor\qunit-1.14.0.css" />
+    <Content Include="Content\select2-master\tests\vendor\qunit-1.14.0.js" />
+    <Content Include="Content\select2-master\vendor\jquery-2.1.0.js" />
+    <Content Include="Content\utility.combobox.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controls\BootstrapHelper.cs" />
+    <Compile Include="Controls\LabelExtentions.cs" />
+    <Compile Include="BootstrapExtensions\BootstrapHelper.cs" />
+    <Compile Include="BootstrapExtensions\BootstrapWebViewPage.cs" />
+    <Compile Include="BootstrapExtensions\ButtonExtensions.cs" />
+    <Compile Include="BootstrapExtensions\CheckBoxExtensions.cs" />
+    <Compile Include="BootstrapExtensions\DateTimeBoxExtensions.cs" />
+    <Compile Include="BootstrapExtensions\InputExtensions.cs" />
+    <Compile Include="BootstrapExtensions\LabelExtensions.cs" />
+    <Compile Include="BootstrapExtensions\NumberBoxExtensions.cs" />
+    <Compile Include="BootstrapExtensions\RadioExtensions.cs" />
+    <Compile Include="BootstrapExtensions\SelectExtensions.cs" />
+    <Compile Include="BootstrapExtensions\TextareExtensions.cs" />
+    <Compile Include="BootstrapExtensions\TextBoxExtensions.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\select2-master\.editorconfig" />
+    <Content Include="Content\select2-master\.gitignore" />
+    <Content Include="Content\select2-master\.jshintignore" />
+    <Content Include="Content\select2-master\.jshintrc" />
+    <Content Include="Content\select2-master\.travis.yml" />
+    <Content Include="Content\select2-master\bower.json" />
+    <Content Include="Content\select2-master\component.json" />
+    <Content Include="Content\select2-master\composer.json" />
+    <Content Include="Content\select2-master\CONTRIBUTING.md" />
+    <Content Include="Content\select2-master\docs\.gitignore" />
+    <Content Include="Content\select2-master\docs\css\s2-docs.scss" />
+    <Content Include="Content\select2-master\docs\dist\.gitkeep" />
+    <Content Include="Content\select2-master\docs\README.md" />
+    <Content Include="Content\select2-master\docs\vendor\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\select2-master\docs\vendor\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\select2-master\docs\vendor\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\select2-master\docs\vendor\fonts\FontAwesome.otf" />
+    <Content Include="Content\select2-master\docs\_sass\_alert.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_anchorjs.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_buttons.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_code.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_examples.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_featurette.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_footer.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_hamburger.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_home.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_jumbotron.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_layout.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_nav.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_prettify.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_result-repository.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_sidenav.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_social.scss" />
+    <Content Include="Content\select2-master\docs\_sass\_typography.scss" />
+    <Content Include="Content\select2-master\LICENSE.md" />
+    <Content Include="Content\select2-master\package.json" />
+    <Content Include="Content\select2-master\README.md" />
+    <Content Include="Content\select2-master\select2.jquery.json" />
+    <Content Include="Content\select2-master\src\scss\core.scss" />
+    <Content Include="Content\select2-master\src\scss\mixins\_gradients.scss" />
+    <Content Include="Content\select2-master\src\scss\theme\classic\layout.scss" />
+    <Content Include="Content\select2-master\src\scss\theme\classic\_defaults.scss" />
+    <Content Include="Content\select2-master\src\scss\theme\classic\_multiple.scss" />
+    <Content Include="Content\select2-master\src\scss\theme\classic\_single.scss" />
+    <Content Include="Content\select2-master\src\scss\theme\default\layout.scss" />
+    <Content Include="Content\select2-master\src\scss\theme\default\_multiple.scss" />
+    <Content Include="Content\select2-master\src\scss\theme\default\_single.scss" />
+    <Content Include="Content\select2-master\src\scss\_dropdown.scss" />
+    <Content Include="Content\select2-master\src\scss\_multiple.scss" />
+    <Content Include="Content\select2-master\src\scss\_single.scss" />
+    <Content Include="Content\jquery.spinner\css\bootstrap-spinner.css.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18782</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18782/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

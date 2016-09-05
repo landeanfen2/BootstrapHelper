@@ -1,0 +1,101 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="~/Content/jquery.spinner/css/bootstrap-spinner.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+    <script src="~/Content/jquery-1.9.1.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/jquery.spinner/js/jquery.spinner.js"></script>
+    <script src="~/Content/bootstrap-datetimepicker/js/moment-with-locales.js"></script>
+    <script src="~/Content/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/Content/utility.combobox.js"></script>
+    <script src="~/Content/bootstrap-datetimepicker/js/bootstrap-datetimepicker-helper.js"></script>
+</head>
+<body>
+    @model BootstrapHelpers.Models.User
+    <div class="panel-body">
+
+        <div class="form-group">
+            <div class="col-xs-2">
+                @Bootstrap.TextBox("kk", "kk", "Kate")
+            </div>
+            <div class="col-xs-2">
+                @Bootstrap.TextBoxFor(x => x.Name)
+            </div>
+            <div class="col-xs-2">
+                @Bootstrap.NumberTextBox(null, "1", null, null, null, null)
+            </div>
+            <div class="col-xs-3">
+                
+                @Bootstrap.DateTimeBox("starttime", null, null, null, null, null, null)
+            </div>
+            <div class="col-xs-3">
+                @Bootstrap.DateTimeBox("endtime", null, null, null, null, null, null)
+            </div>
+            <div class="col-xs-2">
+               @Bootstrap.SelectBox("sel", null, null, "/Home/GetDept", null, "Name", "Id")
+            </div>
+        </div>
+        <div class="col-xs-3">
+            @Bootstrap.TextAreaBox("", "", "", 3, 5)
+        </div>
+        
+
+
+        @*@Bootstrap.Label(null, "Bootstrap Label标签", null, null)*@
+
+
+    </div>
+            <div class="radio">
+                @Bootstrap.Radio("aa", "bb", "cc", "dd", null, true, false, null)
+            </div>
+            <div>
+                @Bootstrap.Radio("fd", "cc", "cc", "法国", "radio-inline", true, false, null)
+                @Bootstrap.Radio("dfer", "cc", "cc", "英国", "radio-inline", true, false, null)
+                @Bootstrap.Radio("erer", "cc", "cc", "意大利", "radio-inline", true, false, null)
+            </div>
+            <div>
+                @Bootstrap.CheckBox("fd", "cc2", "cc", "法国", "checkbox-inline", true, false, null)
+                @Bootstrap.CheckBox("dfer", "cc2", "cc", "英国", "checkbox-inline", true, false, null)
+                @Bootstrap.CheckBox("erer", "cc2", "cc", "意大利", "checkbox-inline", true, false, null)
+            </div>
+            <div>
+                @Bootstrap.Button("测试按钮", "glyphicon-ok",ButtonClass.Primary)
+                @Bootstrap.Button("提交", "glyphicon-ok", ButtonType.Submit, ButtonClass.Success, null, ButtonSize.lg)
+            </div>
+            @*<div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="checkboxSuccess" value="option1" checked="checked" disabled>
+                        Checkbox with success
+                    </label>
+                </div>
+
+                <div class="has-warning">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="checkboxWarning" value="option1">
+                            Checkbox with warning
+                        </label>
+                    </div>
+                </div>
+                <div class="has-error">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="checkboxError" value="option1">
+                            Checkbox with error
+                        </label>
+                    </div>
+                </div>*@
+</body>
+</html>
